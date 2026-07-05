@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Web Page - Week 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="navbar">
+        <div class="logo">MyBrand</div>
+        <nav aria-label="Main navigation">
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">
+                <span class="sr-only">Menu</span>
+                ☰
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#main-content">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Fast and Accessible by Design</h1>
+            <p>A page built with performance and screen reader users in mind.</p>
+            <button class="cta-btn">Get Started</button>
+        </section>
+
+        <section class="services" id="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Our Services</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <h3>Web Design</h3>
+                    <p>Clean, modern interfaces built with accessibility in mind.</p>
+                </article>
+                <article class="card">
+                    <h3>Development</h3>
+                    <p>Fast, semantic, and well-structured websites.</p>
+                </article>
+                <article class="card">
+                    <h3>Optimization</h3>
+                    <p>Better load times through smaller assets and cleaner code.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="gallery" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Gallery</h2>
+            <div class="gallery-grid">
+                <img src="images/photo1.jpg" alt="Team working together at a desk" loading="lazy" width="400"
+                    height="300">
+                <img src="images/photo2.jpg" alt="Laptop showing a code editor" loading="lazy" width="400" height="300">
+                <img src="images/photo3.jpg" alt="Whiteboard with a wireframe sketch" loading="lazy" width="400"
+                    height="300">
+            </div>
+        </section>
+
+        <section class="form-section" id="contact" aria-labelledby="form-heading">
+            <h2 id="form-heading">Contact Us</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
