@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page - Week 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">MyBrand</div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#form">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <h1>Interactive Web Page</h1>
+        <p>Click around — tabs, a form, and an expandable card all work below.</p>
+    </section>
+
+    <section class="tabs-section" id="tabs">
+        <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="tab1">Overview</button>
+            <button class="tab-btn" data-tab="tab2">Features</button>
+            <button class="tab-btn" data-tab="tab3">Pricing</button>
+        </div>
+        <div class="tab-content active" id="tab1">
+            <p>This is the overview tab. Click the other buttons to switch content.</p>
+        </div>
+        <div class="tab-content" id="tab2">
+            <p>Here's where the features would be listed out.</p>
+        </div>
+        <div class="tab-content" id="tab3">
+            <p>Pricing details would go here.</p>
+        </div>
+    </section>
+
+    <section class="card-section">
+        <div class="expand-card">
+            <h3>About This Project</h3>
+            <p class="card-text short">This is a short preview of the text...</p>
+            <p class="card-text full hidden">This is the full version of the text that shows up once you click Read
+                More. It goes into more detail about the project and explains things a bit further than the short
+                preview does.</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+    </section>
+
+    <section class="form-section" id="form">
+        <h2>Contact Form</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name">
+            <span class="error" id="nameError"></span>
+
+            <input type="email" id="email" placeholder="Your Email">
+            <span class="error" id="emailError"></span>
+
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <span class="error" id="messageError"></span>
+
+            <button type="submit">Send</button>
+            <p class="success hidden" id="successMsg">Message sent!</p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
